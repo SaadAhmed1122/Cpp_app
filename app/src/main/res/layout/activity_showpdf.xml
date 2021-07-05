@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Showpdf">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbarlayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="backcall"
+                android:src="@drawable/backbtn_white" />
+
+            <TextView
+                android:id="@+id/toolbartext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:text="Title Text"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfviewer"
+        android:layout_width="match_parent"
+        android:layout_height="692dp"
+        android:layout_above="@+id/ad_view2"
+        android:layout_below="@id/appbarlayout"
+        android:layout_marginBottom="26dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_unit_id"
+        />
+
+
+</RelativeLayout>
